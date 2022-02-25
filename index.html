@@ -5,14 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="style.css">
-    <title>Carousel</title>
+    <title>Vue Slider</title>
 </head>
 <body>
     <section>
-        <div class="container">
-            <div class="slide-wrapper">
+        <div id="container" class="container">
+            <div  class="slide-wrapper">
+                <div class="slide" v-for="(item,i) in immaginiSlider" :class="slidez+i">
+                    <img :src="item.immagine" alt="">
+                    <div class="testo">
+                        <h1>{{item.titolo}}</h1>
+                        <h4>{{item.descrizione}}</h4>
+                    </div>
+                </div>
                 <!-- <div class="slide active">
                     <img src="img/01.jpg" alt="">
                     <div class="testo">
@@ -22,22 +30,10 @@
                 </div> -->
             </div>
             <div class="item-wrapper">
-                <!-- <div class="item active">
-                    <img src="img/01.jpg" alt="">
+                <div class="item" v-for="(item,i) in immaginiSlider" :class="itemz+i">
+                    <img :src="item.immagine" alt="">
                 </div>
-                <div class="item">
-                    <img src="img/02.jpg" alt="">
-                </div>
-                <div class="item">
-                    <img src="img/03.jpg" alt="">
-                </div>
-                <div class="item">
-                    <img src="img/04.jpg" alt="">
-                </div>
-                <div class="item">
-                    <img src="img/05.jpg" alt="">
-                </div> -->
-                <div>
+                <div id="bottoni">
                     <span>
                         <i id="next" class='fas fa-chevron-circle-down'></i>
                     </span>
