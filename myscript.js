@@ -34,8 +34,7 @@ const container = new Vue (
                     }
                 ],
 
-                itemz: "item-",
-                slidez: "slide-"
+                indice: 0,
                 
         },
 

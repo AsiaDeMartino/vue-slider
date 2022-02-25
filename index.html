@@ -14,7 +14,7 @@
     <section>
         <div id="container" class="container">
             <div  class="slide-wrapper">
-                <div class="slide" v-for="(item,i) in immaginiSlider" :class="slidez+i">
+                <div class="slide" v-for="(item,i) in immaginiSlider" :class="indice == i ? 'active': ''">
                     <img :src="item.immagine" alt="">
                     <div class="testo">
                         <h1>{{item.titolo}}</h1>
@@ -30,7 +30,7 @@
                 </div> -->
             </div>
             <div class="item-wrapper">
-                <div class="item" v-for="(item,i) in immaginiSlider" :class="itemz+i">
+                <div class="item" v-for="(item,i) in immaginiSlider" :class="indice == i ? 'active': ''" :class="indice">
                     <img :src="item.immagine" alt="">
                 </div>
                 <div id="bottoni">
