@@ -21,13 +21,6 @@
                         <h4>{{item.descrizione}}</h4>
                     </div>
                 </div>
-                <!-- <div class="slide active">
-                    <img src="img/01.jpg" alt="">
-                    <div class="testo">
-                        <h1>Svezia</h1>
-                        <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.</h4>
-                    </div>
-                </div> -->
             </div>
             <div class="item-wrapper">
                 <div class="item" v-for="(item,i) in immaginiSlider" :class="indice == i ? 'active': ''" :class="indice" @click="immagineAttiva(i)">
