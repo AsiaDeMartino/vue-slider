@@ -39,7 +39,25 @@ const container = new Vue (
         },
 
         methods: {
+            next: function()  {
+                if (this.indice < this.immaginiSlider.length - 1) {
+                    this.indice++;
+                } else {
+                    this.indice = 0;
+                }
+            },
 
+            prev: function()  {
+                if (this.indice > 0) {
+                   this.indice--;
+                } else {
+                    this.indice = this.immaginiSlider.length - 1;
+                }
+            },
+
+            immagineAttiva: function(j){
+                this.indice = j;
+            },
              
         }       
 });
