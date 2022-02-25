@@ -12,7 +12,7 @@
 </head>
 <body>
     <section>
-        <div id="container" class="container">
+        <div id="container" class="container" @mouseover="stop" @mouseleave="play">
             <div  class="slide-wrapper">
                 <div class="slide" v-for="(item,i) in immaginiSlider" :class="indice == i ? 'active': ''">
                     <img :src="item.immagine" alt="">

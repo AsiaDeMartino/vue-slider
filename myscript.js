@@ -59,11 +59,19 @@ const container = new Vue (
             immagineAttiva: function(j){
                 this.indice = j;
             },
+
+            stop: function(){
+                clearInterval(this.clock);
+            },
+
+            play: function(){
+               this.clock = setInterval(this.next,3000);
+            }
              
         },
         
         mounted(){
-            setInterval( this.next ,3000);
+            this.clock = setInterval( this.next ,3000);
         },
 });
 
